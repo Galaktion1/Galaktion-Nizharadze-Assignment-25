@@ -57,7 +57,7 @@ class ContentsOfFolderVC: UIViewController {
     
     @objc func fileAddAction() {
         self.presentAlertForFileNaming { [weak self] (title) in
-            self?.contents.append(title)
+            self?.contents.append(title + ".txt")
             self?.write(text: "Hello, world", to: title)
         }
     }

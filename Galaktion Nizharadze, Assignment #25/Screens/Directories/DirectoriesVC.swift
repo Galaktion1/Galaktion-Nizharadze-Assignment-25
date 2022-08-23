@@ -65,7 +65,7 @@ class DirectoriesVC: UIViewController {
     @objc func addTapped() {
         self.presentAlertForFileNaming { [weak self] (title) in
             self?.createDir(title: title)
-            self?.allDirectories.append(title)
+            self?.getAllDirectories()
         }
     }
 }
@@ -94,7 +94,8 @@ extension DirectoriesVC: UITableViewDelegate, UITableViewDataSource {
         let documentDirectory = paths[0]
         if let allItems = try? FileManager.default.contentsOfDirectory(atPath: documentDirectory) {
             do {
-                let currentDirURL = paths[0] + "/" + allItems[indexPath.row]
+                
+                let currentDirURL = paths[0] + "/" + allDirectories[indexPath.row]
                 vc.contents = try FileManager.default.contentsOfDirectory(atPath: currentDirURL)
                 vc.currentDirTitle = allItems[indexPath.row]
                 vc.currentDirPath = currentDirURL
