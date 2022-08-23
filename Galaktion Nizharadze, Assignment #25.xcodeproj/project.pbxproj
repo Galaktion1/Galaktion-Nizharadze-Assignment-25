@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		9ADA400228B4DBBF000FAC11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA400128B4DBBF000FAC11 /* AppDelegate.swift */; };
 		9ADA400428B4DBBF000FAC11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA400328B4DBBF000FAC11 /* SceneDelegate.swift */; };
-		9ADA400628B4DBBF000FAC11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA400528B4DBBF000FAC11 /* ViewController.swift */; };
-		9ADA400928B4DBBF000FAC11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADA400728B4DBBF000FAC11 /* Main.storyboard */; };
+		9ADA400628B4DBBF000FAC11 /* DirectoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA400528B4DBBF000FAC11 /* DirectoriesVC.swift */; };
+		9ADA400928B4DBBF000FAC11 /* Directories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADA400728B4DBBF000FAC11 /* Directories.storyboard */; };
 		9ADA400B28B4DBC1000FAC11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ADA400A28B4DBC1000FAC11 /* Assets.xcassets */; };
 		9ADA400E28B4DBC1000FAC11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADA400C28B4DBC1000FAC11 /* LaunchScreen.storyboard */; };
+		9ADA401928B4DDA7000FAC11 /* DirectoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA401828B4DDA7000FAC11 /* DirectoryTableViewCell.swift */; };
+		9ADA401C28B4F4CC000FAC11 /* ContentsOfFolderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA401B28B4F4CC000FAC11 /* ContentsOfFolderVC.swift */; };
+		9ADA402028B4FEB0000FAC11 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA401F28B4FEB0000FAC11 /* Extensions.swift */; };
+		9ADA402228B50882000FAC11 /* ContentsOfFileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA402128B50882000FAC11 /* ContentsOfFileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9ADA3FFE28B4DBBF000FAC11 /* Galaktion Nizharadze, Assignment #25.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Galaktion Nizharadze, Assignment #25.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADA400128B4DBBF000FAC11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADA400328B4DBBF000FAC11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9ADA400528B4DBBF000FAC11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9ADA400828B4DBBF000FAC11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9ADA400528B4DBBF000FAC11 /* DirectoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoriesVC.swift; sourceTree = "<group>"; };
+		9ADA400828B4DBBF000FAC11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Directories.storyboard; sourceTree = "<group>"; };
 		9ADA400A28B4DBC1000FAC11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9ADA400D28B4DBC1000FAC11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ADA400F28B4DBC1000FAC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ADA401828B4DDA7000FAC11 /* DirectoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewCell.swift; sourceTree = "<group>"; };
+		9ADA401B28B4F4CC000FAC11 /* ContentsOfFolderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsOfFolderVC.swift; sourceTree = "<group>"; };
+		9ADA401F28B4FEB0000FAC11 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9ADA402128B50882000FAC11 /* ContentsOfFileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsOfFileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		9ADA400028B4DBBF000FAC11 /* Galaktion Nizharadze, Assignment #25 */ = {
 			isa = PBXGroup;
 			children = (
+				9ADA401528B4DBDC000FAC11 /* SupportingFiles */,
+				9ADA401628B4DC24000FAC11 /* Screens */,
+			);
+			path = "Galaktion Nizharadze, Assignment #25";
+			sourceTree = "<group>";
+		};
+		9ADA401528B4DBDC000FAC11 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				9ADA400128B4DBBF000FAC11 /* AppDelegate.swift */,
 				9ADA400328B4DBBF000FAC11 /* SceneDelegate.swift */,
-				9ADA400528B4DBBF000FAC11 /* ViewController.swift */,
-				9ADA400728B4DBBF000FAC11 /* Main.storyboard */,
 				9ADA400A28B4DBC1000FAC11 /* Assets.xcassets */,
 				9ADA400C28B4DBC1000FAC11 /* LaunchScreen.storyboard */,
 				9ADA400F28B4DBC1000FAC11 /* Info.plist */,
+				9ADA401F28B4FEB0000FAC11 /* Extensions.swift */,
 			);
-			path = "Galaktion Nizharadze, Assignment #25";
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		9ADA401628B4DC24000FAC11 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9ADA401728B4DC3B000FAC11 /* Directories */,
+				9ADA401B28B4F4CC000FAC11 /* ContentsOfFolderVC.swift */,
+				9ADA402128B50882000FAC11 /* ContentsOfFileVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9ADA401728B4DC3B000FAC11 /* Directories */ = {
+			isa = PBXGroup;
+			children = (
+				9ADA400528B4DBBF000FAC11 /* DirectoriesVC.swift */,
+				9ADA400728B4DBBF000FAC11 /* Directories.storyboard */,
+				9ADA401828B4DDA7000FAC11 /* DirectoryTableViewCell.swift */,
+			);
+			path = Directories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +163,7 @@
 			files = (
 				9ADA400E28B4DBC1000FAC11 /* LaunchScreen.storyboard in Resources */,
 				9ADA400B28B4DBC1000FAC11 /* Assets.xcassets in Resources */,
-				9ADA400928B4DBBF000FAC11 /* Main.storyboard in Resources */,
+				9ADA400928B4DBBF000FAC11 /* Directories.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,21 +174,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ADA400628B4DBBF000FAC11 /* ViewController.swift in Sources */,
+				9ADA401C28B4F4CC000FAC11 /* ContentsOfFolderVC.swift in Sources */,
+				9ADA402228B50882000FAC11 /* ContentsOfFileVC.swift in Sources */,
+				9ADA402028B4FEB0000FAC11 /* Extensions.swift in Sources */,
+				9ADA400628B4DBBF000FAC11 /* DirectoriesVC.swift in Sources */,
 				9ADA400228B4DBBF000FAC11 /* AppDelegate.swift in Sources */,
 				9ADA400428B4DBBF000FAC11 /* SceneDelegate.swift in Sources */,
+				9ADA401928B4DDA7000FAC11 /* DirectoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9ADA400728B4DBBF000FAC11 /* Main.storyboard */ = {
+		9ADA400728B4DBBF000FAC11 /* Directories.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9ADA400828B4DBBF000FAC11 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Directories.storyboard;
 			sourceTree = "<group>";
 		};
 		9ADA400C28B4DBC1000FAC11 /* LaunchScreen.storyboard */ = {
@@ -289,10 +329,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9BZ4794R5K;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Galaktion Nizharadze, Assignment #25/Info.plist";
+				INFOPLIST_FILE = "Galaktion Nizharadze, Assignment #25/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Directories;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +357,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9BZ4794R5K;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Galaktion Nizharadze, Assignment #25/Info.plist";
+				INFOPLIST_FILE = "Galaktion Nizharadze, Assignment #25/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Directories;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
