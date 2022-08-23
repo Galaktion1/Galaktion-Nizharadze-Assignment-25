@@ -47,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AC1587028B56C0C002634BB /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				9ADA400128B4DBBF000FAC11 /* AppDelegate.swift */,
+				9ADA400328B4DBBF000FAC11 /* SceneDelegate.swift */,
+				9ADA400F28B4DBC1000FAC11 /* Info.plist */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		9ADA3FF528B4DBBF000FAC11 = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +78,6 @@
 			children = (
 				9ADA401528B4DBDC000FAC11 /* SupportingFiles */,
 				9ADA401628B4DC24000FAC11 /* Screens */,
-				9AC1586E28B563DB002634BB /* FileManagerSupport.swift */,
 			);
 			path = "Galaktion Nizharadze, Assignment #25";
 			sourceTree = "<group>";
@@ -76,12 +85,11 @@
 		9ADA401528B4DBDC000FAC11 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				9ADA400128B4DBBF000FAC11 /* AppDelegate.swift */,
-				9ADA400328B4DBBF000FAC11 /* SceneDelegate.swift */,
+				9AC1587028B56C0C002634BB /* Infrastructure */,
 				9ADA400A28B4DBC1000FAC11 /* Assets.xcassets */,
 				9ADA400C28B4DBC1000FAC11 /* LaunchScreen.storyboard */,
-				9ADA400F28B4DBC1000FAC11 /* Info.plist */,
 				9ADA401F28B4FEB0000FAC11 /* Extensions.swift */,
+				9AC1586E28B563DB002634BB /* FileManagerSupport.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -333,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9BZ4794R5K;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Galaktion Nizharadze, Assignment #25/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "Galaktion Nizharadze, Assignment #25/SupportingFiles/Infrastructure/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Directories;
@@ -361,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9BZ4794R5K;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Galaktion Nizharadze, Assignment #25/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "Galaktion Nizharadze, Assignment #25/SupportingFiles/Infrastructure/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Directories;

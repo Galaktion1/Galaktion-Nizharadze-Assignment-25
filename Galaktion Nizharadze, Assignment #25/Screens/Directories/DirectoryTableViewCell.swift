@@ -30,7 +30,7 @@ class DirectoryTableViewCell: UITableViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
-        stackView.spacing = 10
+        stackView.spacing = 15
         
         return stackView
     }()
