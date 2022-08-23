@@ -58,17 +58,10 @@ class ContentsOfFolderVC: UIViewController {
     @objc func fileAddAction() {
         self.presentAlertForFileNaming { [weak self] (title) in
             self?.contents.append(title + ".txt")
-            self?.write(text: "Hello, world", to: title)
+            FileManagerSupport.shared.write(text: "Hello, world", to: title, currentDirTitle: self!.currentDirTitle)
         }
     }
     
-    private func write(text: String, to fileNamed: String) {
-        guard let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else { return }
-        guard let writePath = NSURL(fileURLWithPath: path).appendingPathComponent(currentDirTitle) else { return }
-        try? FileManager.default.createDirectory(atPath: writePath.path, withIntermediateDirectories: true)
-        let file = writePath.appendingPathComponent(fileNamed + ".txt")
-        try? text.write(to: file, atomically: false, encoding: String.Encoding.utf8)
-    }
     
     private func confFileAddButton() {
         view.addSubview(fileAddButton)
@@ -99,6 +92,20 @@ extension ContentsOfFolderVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         heightOfRow
     }
+    
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            FileManagerSupport.shared.deleteDoc(pathAttribute: "/\(currentDirTitle!)/" + contents[indexPath.row])
+            self.contents.remove(at: indexPath.row)
+        }
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ContentsOfFileVC()

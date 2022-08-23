@@ -10,6 +10,7 @@ import UIKit
 class DirectoriesVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    let manager = FileManagerSupport.shared
     
     var allDirectories = [String]() {
         didSet {
@@ -40,31 +41,17 @@ class DirectoriesVC: UIViewController {
         tableView.dataSource = self
     }
     
-    private func createDir(title: String) {
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        let docURL = URL(string: documentsDirectory)!
-        let dataPath = docURL.appendingPathComponent(title)
-        if !FileManager.default.fileExists(atPath: dataPath.path) {
-            do {
-                try FileManager.default.createDirectory(atPath: dataPath.path, withIntermediateDirectories: true, attributes: nil)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-    }
+    
     private func getAllDirectories() {
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        guard let documentDirectory = paths.first else { return }
-        if let allItems = try? FileManager.default.contentsOfDirectory(atPath: documentDirectory) {
-            allDirectories = allItems
+        manager.getAllDirectories { [weak self] allDirectories in
+            self?.allDirectories = allDirectories
         }
     }
     
     
     @objc func addTapped() {
         self.presentAlertForFileNaming { [weak self] (title) in
-            self?.createDir(title: title)
+            self?.manager.createDir(title: title)
             self?.getAllDirectories()
         }
     }
@@ -87,15 +74,29 @@ extension DirectoriesVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let pathAttribute = "/" + allDirectories[indexPath.row]
+            manager.deleteDoc(pathAttribute: pathAttribute)
+            self.allDirectories.remove(at: indexPath.row)
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc = ContentsOfFolderVC()
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentDirectory = paths[0]
+        guard let documentDirectory = paths.first else { return }
         if let allItems = try? FileManager.default.contentsOfDirectory(atPath: documentDirectory) {
             do {
                 
-                let currentDirURL = paths[0] + "/" + allDirectories[indexPath.row]
+                let currentDirURL = documentDirectory + "/" + allDirectories[indexPath.row]
                 vc.contents = try FileManager.default.contentsOfDirectory(atPath: currentDirURL)
                 vc.currentDirTitle = allItems[indexPath.row]
                 vc.currentDirPath = currentDirURL
@@ -106,7 +107,5 @@ extension DirectoriesVC: UITableViewDelegate, UITableViewDataSource {
         
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }
 

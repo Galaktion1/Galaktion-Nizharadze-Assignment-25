@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AC1586F28B563DB002634BB /* FileManagerSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1586E28B563DB002634BB /* FileManagerSupport.swift */; };
 		9ADA400228B4DBBF000FAC11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA400128B4DBBF000FAC11 /* AppDelegate.swift */; };
 		9ADA400428B4DBBF000FAC11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA400328B4DBBF000FAC11 /* SceneDelegate.swift */; };
 		9ADA400628B4DBBF000FAC11 /* DirectoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA400528B4DBBF000FAC11 /* DirectoriesVC.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9AC1586E28B563DB002634BB /* FileManagerSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerSupport.swift; sourceTree = "<group>"; };
 		9ADA3FFE28B4DBBF000FAC11 /* Galaktion Nizharadze, Assignment #25.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Galaktion Nizharadze, Assignment #25.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADA400128B4DBBF000FAC11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADA400328B4DBBF000FAC11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				9ADA401528B4DBDC000FAC11 /* SupportingFiles */,
 				9ADA401628B4DC24000FAC11 /* Screens */,
+				9AC1586E28B563DB002634BB /* FileManagerSupport.swift */,
 			);
 			path = "Galaktion Nizharadze, Assignment #25";
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				9ADA401C28B4F4CC000FAC11 /* ContentsOfFolderVC.swift in Sources */,
 				9ADA402228B50882000FAC11 /* ContentsOfFileVC.swift in Sources */,
 				9ADA402028B4FEB0000FAC11 /* Extensions.swift in Sources */,
+				9AC1586F28B563DB002634BB /* FileManagerSupport.swift in Sources */,
 				9ADA400628B4DBBF000FAC11 /* DirectoriesVC.swift in Sources */,
 				9ADA400228B4DBBF000FAC11 /* AppDelegate.swift in Sources */,
 				9ADA400428B4DBBF000FAC11 /* SceneDelegate.swift in Sources */,
