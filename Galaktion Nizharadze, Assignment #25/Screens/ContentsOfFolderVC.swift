@@ -111,7 +111,7 @@ extension ContentsOfFolderVC: UITableViewDelegate, UITableViewDataSource {
         let vc = ContentsOfFileVC()
 
         do {
-            let currentFileURL = URL(string: "file://" + currentDirPath + "/" + contents[indexPath.row])!
+            let currentFileURL = URL(string: "file://" + currentDirPath + "/" + contents[indexPath.row])! 
             let text2 = try String(contentsOf: currentFileURL, encoding: .utf8)
             vc.text = text2
             vc.currentFileURL = currentFileURL
